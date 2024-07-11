@@ -64,6 +64,12 @@ Refusing to start due to insecure SECRET_KEY
 3. Set Python path env variable for superset to know where to look for config file
 - export PYTHONPATH=$(pwd)
 - export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py
+4. To prevent from setting up env variables again next time, we create a file named **set_env_vars.sh** in project dir, then add these lines to it
+#!/bin/bash
+export FLASK_APP=superset
+export PYTHONPATH=$(pwd)
+export SUPERSET_CONFIG_PATH=$(pwd)/superset_config.py
+export SECRET_KEY='YOUR_SECURE_SECRET_KEY'
 
 Finnaly, we can use this cmd to run apache superset localhost at port 8088
 - superset run -p 8088 --with-threads --reload --debugger
