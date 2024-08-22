@@ -81,6 +81,6 @@ Then run this to make a script executable
 and update env variables with
 - `source /path/to/your/project/set_env_vars.sh`
 ## Connect SQLite to Apache Superset for exploring and visualizing
-
-## DASHBOARD:
+### Data will be updated daily.
+### DASHBOARD:
 ![Pet Dogs in HCM](Dashboard/PetDogs.jpg)
